@@ -1,8 +1,8 @@
 const { Configuration, OpenAIApi } = require("openai");
 const Mustache = require("mustache");
 const fs = require("fs");
+const cors = require("cors");
 const express = require("express");
-const csvtojsonV2 = require("csvtojson");
 
 require("dotenv").config();
 
@@ -25,6 +25,7 @@ try {
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.use(cors());
 app.use(express.json());
 
 app.get("/extract-event", (req, res) => {
