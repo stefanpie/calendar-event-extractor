@@ -1,0 +1,12 @@
+Given some text, extract the events from the text and format them into a json array. Each event will be a dict in the array with a key for the event_name, start_datetime, and end_datetime. The datetimes should be in the YYYY-MM-DDTHH:MM:SS format. If an event doesn't have an end datetime, then leave the end datetime blank.
+The array should start with [START EVENTS OBJECT] and end with [END EVENTS OBJECT].
+
+Input Text:
+
+{{input_text}}
+
+Event Table Output:
+
+[START EVENTS OBJECT]
+
+[
