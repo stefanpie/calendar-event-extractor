@@ -67,7 +67,7 @@ app.post("/extract-event", async (req, res) => {
   const prompt = Mustache.render(prompt_template, { input_text: input_text });
   console.log(prompt);
 
-  const openai_response = await openai.createCompletion("text-davinci-002", {
+  const openai_response = await openai.createCompletion("text-davinci-003", {
     prompt: prompt,
     max_tokens: 512,
     temperature: 0.7,
